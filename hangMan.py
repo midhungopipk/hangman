@@ -21,7 +21,7 @@ def find_match(ch, i):
         for e in dict_updated:
             if ch == e[i] and len(e) == length_ofWord:
                 words.append(e)
-                print(''.join(word), (length_ofWord-len(word))*'_ ')
+        print(''.join(word), (length_ofWord-len(word))*'_ ')
     else:
         word.append(ch)
         for l in words:
@@ -34,15 +34,18 @@ def find_match(ch, i):
         else:
             word.pop()
             print('NOT LUCKY!')
+            print(''.join(word), (length_ofWord-len(word))*'_ ')
 
 
 for k in range(no_of_guesses):
     if len("".join(word)) == length_ofWord:
         print('YOU HAVE WON.')
         break
-    elif len(words) != 0:
+    # elif len(words) != 0:
+    #     break
+    else:
         l = input("Guess the Letter? ")
         find_match(l, k)
-    else:
-        print('There is no word in the dictionary with this length!')
-        break
+    # else:
+    #     print('There is no word in the dictionary with this length!')
+    #     break
