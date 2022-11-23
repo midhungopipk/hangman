@@ -29,6 +29,6 @@ def find_plant(name, i):
 
 for i in range(l):
     find_plant(name_array[i], i)
-
+print('Your unique plants are')
 for e in plants:
     print(random.choice(plants[e]), end=' ')
