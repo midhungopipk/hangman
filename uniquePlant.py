@@ -2,12 +2,13 @@ import random
 
 f = open("plants.txt")
 a = []
+plants = {}
+
 for p in f:
     a.append(p)
 
-name = input('Enter your full name: ').lower()
+name = input("Enter your full name: ").lower()
 
-plants = {}
 name_array = name.split()
 l = len(name_array)
 
@@ -29,6 +30,10 @@ def find_plant(name, i):
 
 for i in range(l):
     find_plant(name_array[i], i)
-print('Your unique plants are')
+
+
+print("Your unique plants are")
+
+
 for e in plants:
-    print(random.choice(plants[e]), end=' ')
+    print(random.choice(plants[e]), end=" ")
